@@ -1,0 +1,184 @@
+// Buttons
+// -------------------
+// Overrides: atom/atom/static/buttons.less
+
+.btn {
+	padding-top: 1px;
+	color: lighten(@text-color, 6%);
+	background-color: @button-background-color;
+	border: 1px solid @button-border-color;
+	border-radius: @component-border-radius;
+	transition-property: color, border, box-shadow, background-color, opacity;
+	transition-duration: 0.3s;
+	transition-timing-function: ease;
+
+	&:not(.disabled) {
+		&:hover {
+			color: @text-color-highlight;
+			background-color: @button-background-color-hover;
+			border-color: lighten(@button-border-color, 5%);
+		}
+
+		&:active {
+			box-shadow: inset 0 -60px 20px -20px @blue;
+			border-color: @blue;
+		}
+	}
+
+	&.selected {
+		color: @text-color-selected;
+		box-shadow: inset 0 -22px 0 -20px @blue;
+	}
+
+	&:focus,
+	&:focus:active {
+		outline: none;
+	}
+}
+// Colored buttons -----------------------
+
+.btn.btn-primary {
+	.btn-color(@background-color-info);
+}
+
+.btn.btn-info {
+	.btn-color(@background-color-info);
+}
+
+.btn.btn-success {
+	.btn-color(@background-color-success);
+}
+
+.btn.btn-warning {
+	.btn-color(@background-color-warning);
+}
+
+.btn.btn-error {
+	.btn-color(@background-color-error);
+}
+
+.btn-color(@bg) {
+	color: @text-color-selected;
+	background-color: @bg;
+
+	&:focus,
+	&:hover {
+		background-color: lighten(@bg, 4%);
+	}
+
+	&:active {
+		background-color: darken(@bg, 4%);
+	}
+
+	&.selected {
+		background-color: lighten(@bg, 4%);
+	}
+
+	&.selected:hover {
+		background-color: lighten(@bg, 8%);
+	}
+}
+// Button Group -----------------------
+
+.btn-group > .btn {
+	// border-color: hsla(0,0%,0%,.2);
+	// border-width: 1px !important;
+	border: 0;
+
+	&:hover {}
+
+	&:first-child {
+		&:hover {}
+	}
+}
+
+.input-label,
+.settings-view .input-label {
+	cursor: pointer;
+}
+
+.settings-view input[type="radio"],
+input[type="radio"] {
+	background-color: @background-color-highlight;
+	cursor: pointer;
+
+	&:checked,
+	&:hover {
+		background-color: lighten(@background-color-highlight, 5%);
+	}
+
+	&:checked {
+		background-color: @blue;
+	}
+
+	&:active {
+		background-color: lighten(@background-color-highlight, 15%);
+	}
+}
+
+.settings-view input[type="checkbox"],
+input[type="checkbox"] {
+	background-color: @background-color-highlight;
+	cursor: pointer;
+
+	&:checked,
+	&:hover {
+		background-color: lighten(@background-color-highlight, 5%);
+	}
+
+	&:active,
+	&:checked:active {
+		background-color: lighten(@background-color-highlight, 15%);
+	}
+
+	&:after,
+	&:before {
+		background-color: @blue;
+	}
+}
+
+.select-container,
+.settings-view .select-container {
+	position: relative;
+
+	&:after {
+		content: "\f0a3";
+		font-family: 'Octicons Regular';
+		font-weight: normal;
+		font-style: normal;
+		display: block;
+		position: absolute;
+		right: 8px;
+		top: 50%;
+		margin-top: -8px;
+		line-height: 1;
+		-webkit-font-smoothing: antialiased;
+		text-decoration: none;
+		font-size: 16px;
+		width: 16px;
+		height: 16px;
+	}
+}
+
+.settings-view select,
+select {
+	padding: 7px 10px;
+	cursor: pointer;
+	background-color: @button-background-color;
+	border: 1px solid @button-border-color;
+	border-radius: @component-border-radius;
+	transition-property: color, border, box-shadow, background-color, opacity;
+	transition-duration: 0.3s;
+	transition-timing-function: ease;
+
+	&:focus,
+	&:hover {
+		color: @text-color-highlight;
+		background-color: @button-background-color-hover;
+		border-color: @blue;
+	}
+
+	&.form-control {
+		-webkit-appearance: none;
+	}
+}

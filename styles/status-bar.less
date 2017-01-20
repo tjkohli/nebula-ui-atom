@@ -1,0 +1,36 @@
+// Status Bar
+// -------------------
+// Located at the bottom.
+// Displays information about the current editor.
+// Overrides: atom/status-bar
+
+.status-bar {
+	font-size: @font-size;
+	// border-top: 1px solid @base-border-color;
+	background-color: @status-bar-background-color;
+
+	& > div {
+		opacity: 0.4;
+		-webkit-filter: grayscale(50%);
+		transition-property: opacity, -webkit-filter;
+		transition-duration: 0.3s;
+		transition-timing-function: ease;
+	}
+
+	&:hover {
+		& > div {
+			opacity: 1;
+			-webkit-filter: grayscale(0%);
+		}
+	}
+
+	a {
+		color: @text-color-subtle;
+		text-decoration: none;
+		transition: color 0.3s ease;
+
+		&:hover {
+			color: @text-color-selected;
+		}
+	}
+}

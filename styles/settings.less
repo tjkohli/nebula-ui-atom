@@ -1,0 +1,96 @@
+// Settings
+// -------------------
+// Used to style the settings window
+.settings-view {
+	font-size: 14px;
+	line-height: 24px;
+	-webkit-font-smoothing: antialiased;
+
+	.link {
+		color: @text-color;
+		text-decoration: none;
+		transition: color 0.3s ease;
+
+		&:hover {
+			color: @blue;
+		}
+	}
+
+	label {
+		font-weight: normal;
+	}
+
+	.text {
+		color: @text-color-subtle;
+	}
+
+	.section {
+		.section-heading {
+			font-weight: 300;
+			margin-bottom: 10px;
+		}
+	}
+
+	.config-menu {
+		border-right: 0;
+
+		.nav {
+			> li {
+				> a {
+					transition: background-color 0.3s ease;
+				}
+
+				&.active {
+					> a {
+						color: @text-color;
+					}
+				}
+			}
+		}
+	}
+
+	.package-card {
+		background-color: transparent;
+		border: none;
+		margin: 10px 0;
+		transition: background-color 0.3s ease;
+
+		.package-name {
+			text-decoration: none;
+		}
+
+		.package-version {
+			opacity: 0.5;
+		}
+
+		.package-description {
+			color: @text-color-subtle;
+			transition: color 0.3s ease;
+		}
+
+		.meta-user {
+			.author {
+				text-decoration: none;
+				transition: color 0.3s ease;
+
+				&:hover {
+					color: @blue;
+				}
+			}
+		}
+
+		&:hover {
+			background-color: @overlay-background-color;
+
+			.package-description {
+				color: @text-color;
+			}
+		}
+	}
+
+	.package-container {
+		.row {
+			border-bottom: 1px solid @base-border-color;
+		}
+	}
+}

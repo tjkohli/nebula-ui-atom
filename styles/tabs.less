@@ -1,0 +1,123 @@
+// Tabs
+// -------------------
+// Displays selectable tabs above the editor.
+// Overrides: atom/tabs
+
+.tab-bar {
+	background: none;
+	border-radius: 0;
+	background-color: @tab-bar-background-color;
+	border: 1px solid transparent;
+	border-width: 1px 0;
+	padding: 5px 10px;
+	transition: border-color 0.4s ease;
+
+	&:hover {
+		border-color: @base-border-color;
+
+		.tab {
+			opacity: 1;
+		}
+	}
+
+	.tab {
+		color: @text-color-subtle;
+		cursor: pointer;
+		height: @tab-height;
+		line-height: @tab-height;
+		font-size: @font-size;
+		letter-spacing: 0.2px;
+		max-width: none;
+		padding-right: 30px;
+		border: 0 solid transparent;
+		border-right-width: 1px;
+		border-radius: @component-border-radius;
+		background-color: transparent;
+		transition-property: color, background-color, box-shadows;
+		transition-duration: 0.4s;
+		transition-timing-function: ease;
+
+		&:last-of-type {
+			border-right: 0;
+		}
+
+		&.active {
+			flex: 1;
+			color: @text-color-selected;
+			background: none;
+
+			.title {
+				padding-right: 0;
+			}
+		}
+
+		&:hover {
+			background-color: @background-color-highlight;
+
+			.close-icon {
+				color: inherit;
+			}
+		}
+
+		.title {
+			text-align: center;
+		}
+		// Modified Icon (the blue circle) -------------------
+		&.modified {
+			.close-icon {
+				color: @blue;
+			}
+
+			&:not(:hover) .close-icon {
+				top: 50%;
+				width: 7px;
+				height: 7px;
+				right: 12px;
+				margin-top: -3px;
+				border: 1px solid @blue;
+			}
+
+			&:hover {
+				.close-icon {
+					color: @blue;
+				}
+			}
+		}
+		// Close Icon (the X) -------------------
+		.close-icon {
+			color: transparent;
+			width: 30px;
+			text-align: center;
+			right: 0;
+			transition-property: color;
+			transition-duration: 0.2s;
+			transition-timing-function: ease;
+			cursor: pointer;
+
+			&:hover {
+				color: @red !important;
+			}
+		}
+		// Dragging -------------------
+		// Styles get applied while dragging a tab
+		&.is-dragging {
+			//   background: darken(@tab-background-color, 10%);
+			border-color: transparent;
+			opacity: 0.5;
+
+			& .close-icon {
+				visibility: hidden;
+			}
+		}
+	}
+}
+
+.pane-column,
+.panes {
+	.pane:first-of-type {
+		.tab-bar {
+			padding-top: 0;
+			border-top: 0;
+		}
+	}
+}

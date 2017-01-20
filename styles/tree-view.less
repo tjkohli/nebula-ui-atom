@@ -1,0 +1,53 @@
+// Tree View
+// -------------------
+// Used to explore and open files in the current project.
+// Overrides: atom/tree-view
+
+.tree-view-resizer {
+	opacity: 0.4;
+	background: transparent;
+	border-right: 1px solid transparent;
+	transition-property: opacity, border-color, -webkit-filter;
+	transition-duration: 0.3s;
+	transition-timing-function: ease;
+	-webkit-filter: grayscale(50%);
+
+	&:hover {
+		opacity: 1;
+		border-right-color: @background-color-highlight;
+		-webkit-filter: grayscale(0%);
+	}
+}
+
+.tree-view {
+	color: @text-color-subtle;
+	background: none;
+
+	.entry {
+		border-radius: @component-border-radius;
+		cursor: pointer;
+		transition-property: color, background-color;
+		transition-duration: 0.2s;
+		transition-timing-function: ease;
+
+		&:before {
+			display: none;
+		}
+	}
+
+	.list-item {
+		&:hover {
+			background-color: @background-color-highlight;
+		}
+	}
+	// If a folder is selected, this happens to all children
+	// .list-tree {
+	// 	.selected {
+	// 		// color: @text-color-selected;
+	// 	}
+	// }
+}
+
+.tree-view-scroller {
+	padding: 3px 0 50px;
+}

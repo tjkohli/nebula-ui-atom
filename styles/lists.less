@@ -1,0 +1,84 @@
+// Lists
+// -------------------
+// Used in different places, like the Tree View, Commmand Palette etc.
+// Overrides: atom/static/lists.less
+// List Group -------------------
+
+.list-group {
+	li {
+		padding-left: @component-padding/2;
+		// We want to highlight the background of the list items because we dont know their size.
+		&.selected {
+			color: @text-color-selected;
+			background-color: @background-color-selected;
+
+			&:before {
+				display: none;
+			}
+		}
+	}
+}
+
+.fuzzy-finder {
+	.list-group {
+		.character-match {
+			// color: inherit;
+		}
+	}
+}
+// List Tree -------------------
+
+.list-tree {
+	.selected {
+		color: @text-color-selected;
+	}
+}
+// Select List -------------------
+
+.select-list {
+	li {
+		padding: @component-padding/2 @component-padding;
+		border-radius: 2px;
+		color: lighten(desaturate(@base-background-color, 10%), 40%);
+		transition-property: color, background-color;
+		transition-duration: 0.2s;
+		transition-timing-function: ease;
+
+		.secondary-line {
+			opacity: 0.4;
+		}
+	}
+
+	.status {
+		float: right;
+	}
+}
+// Popover List -------------------
+// Used as a popover for something like autocomplete.
+
+.select-list.popover-list {
+	@popover-list-padding: @component-padding/2;
+	padding: @popover-list-padding;
+	border-radius: @component-border-radius;
+	background-color: @overlay-background-color;
+	// box-shadow: 0 2px 8px 1px hsla(0,0%,0%,.3);
+	box-shadow: 0 15px 50px hsla(0, 0, 0, 0.2);
+
+	.suggestion-description {
+		background: none !important;
+		opacity: 0.4;
+		font-weight: 300;
+
+		.suggestion-description-content {
+			color: #fff;
+		}
+	}
+
+	.list-group {
+		margin-top: @popover-list-padding;
+
+		li {
+			padding-left: @popover-list-padding;
+		}
+	}
+}
