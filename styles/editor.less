@@ -53,15 +53,16 @@ atom-text-editor[mini] {
 	}
 	&,// <-- Deprecated. The `&,` can be removed once the Shadow DOM can't be turned off in the settings.
 
-	&::shadow {
-		.placeholder-text {
-			color: fade(@text-color-subtle, 50%);
-		}
-
-		.selection .region {
-			background-color: @background-color-selected;
-		}
+	// Removed due to deprecation
+	// &::shadow {
+	.placeholder-text {
+		color: fade(@text-color-subtle, 50%);
 	}
+
+	.selection .region {
+		background-color: @background-color-selected;
+	}
+	// }
 }
 
 .bracket-matcher {
