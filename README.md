@@ -1,10 +1,10 @@
 <p align="center">
   <img src="http://tjkoh.li/BQOK/1PcggwwS+" alt="Nebula logo" width="300">
 </p>
-<h1 align="center">Nebula</h1>
+<h1 align="center">Nebula UI</h1>
 
 <p align="center">
-  <a href="https://github.com/tjkohli/nebula-ui"><img src="https://img.shields.io/github/release/tjkohli/nebula-ui.svg?style=flat-square" alt="GitHub"></a>
+  <a href="https://github.com/tjkohli/nebula-ui/releases/latest"><img src="https://img.shields.io/github/release/tjkohli/nebula-ui.svg?style=flat-square" alt="GitHub"></a>
   <a href="https://atom.io/themes/nebula-ui"><img src="https://img.shields.io/apm/v/nebula-ui.svg?style=flat-square" alt="Atom"></a>
 <!--   <a href="https://atom.io/themes/nebula-ui"><img src="https://img.shields.io/apm/dm/nebula-ui.svg?style=flat-square" alt="Nebula colors"></a> -->
 </p>
