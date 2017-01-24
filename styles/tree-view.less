@@ -18,15 +18,11 @@
 }
 
 .tree-view {
-	color: @text-color-subtle;
+
 	background: none;
 
 	.entry {
-		border-radius: @component-border-radius;
 		cursor: pointer;
-		transition-property: color, background-color;
-		transition-duration: 0.2s;
-		transition-timing-function: ease;
 
 		&:before {
 			display: none;
@@ -34,6 +30,7 @@
 	}
 
 	.list-item {
+		border-radius: @component-border-radius;
 		&:hover {
 			background-color: @background-color-highlight;
 		}

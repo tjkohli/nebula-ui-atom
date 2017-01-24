@@ -2,6 +2,7 @@
 // -------------------
 // Used in different places, like the Tree View, Commmand Palette etc.
 // Overrides: atom/static/lists.less
+
 // List Group -------------------
 
 .list-group {
@@ -19,22 +20,36 @@
 	}
 }
 
-.fuzzy-finder {
-	.list-group {
-		.character-match {
-			// color: inherit;
-		}
-	}
-}
 // List Tree -------------------
 
+.list-group,
 .list-tree {
+	color: @text-color-subtle;
+	li {
+		.name {
+			padding-right: 17px;
+		}
+		.transition();
+	}
+	.generate-list-item-text-color(@class) {
+		li:not(.list-nested-item).text-@{class},
+	    li.list-nested-item.text-@{class} > .list-item {
+	      .text(@class);
+	    }
+	}
+	.generate-list-item-text-color(subtle);
+	.generate-list-item-text-color(info);
+	.generate-list-item-text-color(success);
+	.generate-list-item-text-color(warning);
+	.generate-list-item-text-color(error);
+	.generate-list-item-text-color(selected);
+
 	.selected {
 		color: @text-color-selected;
 	}
 }
-// Select List -------------------
 
+// Select List -------------------
 .select-list {
 	li {
 		padding: @component-padding/2 @component-padding;
@@ -53,6 +68,7 @@
 		float: right;
 	}
 }
+
 // Popover List -------------------
 // Used as a popover for something like autocomplete.
 
