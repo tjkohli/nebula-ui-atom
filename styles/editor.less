@@ -2,42 +2,6 @@
 // -------------------
 // Mini Editors are the "text inputs" used in find+replace or in the settings.
 
-atom-text-editor {
-	background: @base-background-color;
-	.gutter {
-		background: none;
-
-		.line-number {
-			color: @text-color-subtle;
-			cursor: pointer;
-			transition-property: color;
-			transition-duration: 0.2s;
-			transition-timing-function: ease;
-
-			&.cursor-line {
-				color: @text-color-selected;
-				background: none;
-			}
-		}
-	}
-
-	.cursor {
-		border-color: @text-color-selected;
-		border-width: 2px;
-		transition: opacity 0.2s ease;
-	}
-
-	.cursor-line {
-		background: fade(@background-color-highlight, 20%);
-	}
-
-	.selection {
-		.region {
-			background-color: @background-color-highlight;
-		}
-	}
-}
-
 atom-text-editor[mini] {
 	padding-left: @component-padding/2;
 	color: @text-color;
@@ -46,21 +10,12 @@ atom-text-editor[mini] {
 	.transition(border-color;);
 
 	&.is-focused {
-		// background-color: darken(@input-background-color, 5%);
 		border-bottom-color: @text-color-info;
 	}
-	//&,// <-- Deprecated. The `&,` can be removed once the Shadow DOM can't be turned off in the settings.
-
-	// Removed due to deprecation
-	// &::shadow {
-	// .placeholder-text {
-	// 	color: fade(@text-color-subtle, 50%);
-	// }
 
 	.selection .region {
 		background-color: @background-color-selected;
 	}
-	// }
 }
 
 .bracket-matcher {
