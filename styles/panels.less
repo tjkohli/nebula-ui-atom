@@ -31,10 +31,14 @@ atom-panel.modal {
 }
 
 .panel-bottom {
-	opacity: 0.4;
-	background: transparent;
+	header {
+		opacity: 0.4;
+		background: transparent;
 		.transition(opacity);
+	}
 	&:hover {
-		opacity: 1;
+		header {
+			opacity: 1;
+		}
 	}
 }
