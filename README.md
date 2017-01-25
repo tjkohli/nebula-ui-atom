@@ -84,7 +84,7 @@
 <h2 align="center">A theme that's just your type.</h2>
 <p align="center">
 	The human mind takes 13 milliseconds to recognize a letter. <br>
-	Multiply that by millions of letters every day, and properly-set <br>type saves time, reduce eye strain, and reduce a few headaches.<br>
+	Multiply that by millions of letters every day, and properly-set <br>type saves time, reduces eye strain, and can save you a few headaches.<br>
 	Nebula recommends <a href="https://atom.io/packages/import-sf-mono">SF Mono</a> for editing. It's fantastic.
 </p>
 <br>
