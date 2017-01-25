@@ -91,6 +91,7 @@
 
 <hr>
 
+<br>
 <h2 align="center">The little things make the big things.</h2>
 <h3>Additional features</h3>
 <p>Use the nebula-ui and nebula-syntax themes together and get all these awesome features.
@@ -113,10 +114,7 @@
 <hr>
 
 <p align="center">
-	Made with &hearts; by <a href="http://www.tjkohli.com/">TJ Kohli</a>.
-</p>
-<p align="center">
-	<a href="http://www.tjkohli.com/">
-		<img src="http://tjkoh.li/15T2G/5ICxHe96+" align="center" width="50" alt="Error Pulsing">
+	<a href="http://www.tjkohli.com/" title="Made with <3 by TJ Kohli">
+		<img src="http://tjkoh.li/15T2G/5ICxHe96+" align="center" width="50" alt="Made with <3 by TJ Kohli">
 	</a>
 </p>
