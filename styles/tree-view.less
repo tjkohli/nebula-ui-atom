@@ -5,7 +5,7 @@
 
 .tree-view-resizer {
 	opacity: 0.5;
-	background: transparent;
+	background: none;
 	border-right: 1px solid transparent;
 	.transition(opacity, border-color;);
 
@@ -17,17 +17,13 @@
 
 .tree-view {
 
+	background: none;
 	-webkit-filter: grayscale(50%);
 	.transition(-webkit-filter;);
 
 	&:hover {
 		-webkit-filter: grayscale(0%);
 	}
-}
-
-.tree-view {
-
-	background: none;
 
 	.entry {
 		cursor: pointer;
@@ -43,14 +39,10 @@
 			background-color: @background-color-highlight;
 		}
 	}
-	// If a folder is selected, this happens to all children
-	// .list-tree {
-	// 	.selected {
-	// 		// color: @text-color-selected;
-	// 	}
-	// }
 }
 
 .tree-view-scroller {
 	padding: 3px 0 50px;
+	// force 3D acceleration to work around a Webkit scroll bug
+	transform: translate3d(0,0,0);
 }
