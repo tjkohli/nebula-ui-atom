@@ -1,43 +1,122 @@
+<!-- Logo -->
+
 <p align="center">
-  <img src="http://tjkoh.li/BQOK/1PcggwwS+" alt="Nebula logo" width="300">
+  <img align="center" src="http://tjkoh.li/BQOK/1PcggwwS+" alt="Nebula logo" width="300">
 </p>
+
+<!-- Heading -->
+
 <h1 align="center">Nebula UI</h1>
 
-<p align="center">
-  <a href="https://github.com/tjkohli/nebula-ui/releases/latest"><img src="https://img.shields.io/github/release/tjkohli/nebula-ui.svg?style=flat-square" alt="GitHub"></a>
-  <a href="https://atom.io/themes/nebula-ui"><img src="https://img.shields.io/apm/v/nebula-ui.svg?style=flat-square" alt="Atom"></a>
-<!--   <a href="https://atom.io/themes/nebula-ui"><img src="https://img.shields.io/apm/dm/nebula-ui.svg?style=flat-square" alt="Nebula colors"></a> -->
-</p>
-
-<p align="center">An Atom UI theme that's <em>out of this world</em>.<br>Works best with the <a href="https://github.com/tjkohli/nebula-syntax">nebula-syntax theme</a></p>
+<!-- Shields -->
 
 <p align="center">
-  <img src="http://tjkoh.li/q4OR/47Q3r092+" alt="Nebula theme screenshot">
+	<a href="https://github.com/tjkohli/nebula-ui/releases/latest">
+		<img align="center" src="https://img.shields.io/github/release/tjkohli/nebula-ui.svg?style=flat-square" alt="GitHub">
+	</a>
+	<a href="https://atom.io/themes/nebula-ui">
+		<img align="center" src="https://img.shields.io/apm/v/nebula-ui.svg?style=flat-square" alt="Atom">
+	</a>
 </p>
 
-<h2 align="center">Meet the colors.</h2>
-<p align="center">
-  <img src="http://tjkoh.li/nmlY/12d2Hgpc+" alt="Nebula colors">
-</p>
-
-The six colors used throughout Nebula UI and [Nebula Syntax](https://github.com/tjkohli/nebula-syntax) were painstakingly tested on more than ten different monitors (sRGB, Adobe RGB, and intentionally/unintentionally miscalibrated) to ensure breadth of gamut. The colors were also tested in a monochromatic environment to ensure their contrast levels are exactly the same, so no one color is brighter than another. Then, the colors were given one final tweak to make them a bit more beautiful.
-
-<h2 align="center">Context-aware. Minimally invasive.</h2>
-
-Modals fly above your code. Inputs come to life when activated. Non-editor panes slowly fade into the deep blue-gray background when you're not working in them. Every little detail has been visited, and revisited.
+<p align="center">An Atom theme that's <em>out of this world</em>.<br><a href="https://github.com/tjkohli/nebula-syntax">Works best when paired with the nebula-syntax theme</a></p>
 
 <p align="center">
-  <img src="http://tjkoh.li/EoKQ/1zrgqdez+" alt="Search">
-  <br>
-  <img src="http://tjkoh.li/deT/3HRNDq60+" alt="Settings">
+  <img align="center" src="http://tjkoh.li/q4OR/47Q3r092+" alt="Nebula theme screenshot">
 </p>
+
+<hr>
+
+<!-- Colors -->
+
+<br>
+<p align="center">
+  <img align="center" src="http://tjkoh.li/nmlY/12d2Hgpc+" alt="Nebula colors">
+</p>
+
+<h2 align="center" >Meet the colors.</h2>
+<p align="center">
+	Every great theme starts with great colors. <br>
+	Five are not enough. Seven are too many. <br>
+	A family of six, beautiful colors was chosen <br>
+	through a critical and structured process.
+</p>
+
+<!-- Contrast -->
+
+<h3 align="center">Have your eye candy. And see it, too.</h3>
+<p align="center">
+	All six colors were painstakingly tested for eye strain, legibility, and <br>
+	aesthetics on ten different monitor configurations, including sRGB, Adobe RGB, <br>
+	miscalibrated, grayscale, HDR, high-contrast, low-contrast, f.lux, and more.
+</p>
+
+<h3 align="center">Multichromatic. Monochromatic.</h3>
+<p align="center">
+	All colors were tested together a monochromatic<br>
+	environment to ensure their contrast levels match so<br>no single color catches your eye more than the others do.
+</p>
+<br>
+
+<hr>
+
+<!-- Focus -->
 
 <p align="center">
-  <img src="http://i.giphy.com/12BQyrHqrBij9C.gif" alt="Error Pulsing">
-  <br>
-  <em>Syntax errors detected in your code pulse a deep red underglow.</em>
+  <img align="center" src="http://tjkoh.li/EoKQ/1zrgqdez+" alt="Search">
 </p>
 
----
+<h2 align="center">Minimal distractions. Maximum utility.</h2>
+<p align="center">
+	Modals fly above your code. Inputs come to life when activated. <br>
+	Non-editor panes gracefully fade into the deep blue-gray<br> background when you're not working in them.
+</p>
+<br>
 
-<p align="center">Made with ❤️ by <a href="http://www.tjkohli.com/">TJ Kohli</a>.</p>
+<hr>
+
+<!-- Typography -->
+
+<p align="center">
+  <img align="center" src="http://tjkoh.li/deT/3HRNDq60+" alt="Settings">
+</p>
+
+<h2 align="center">A theme that's just your type.</h2>
+<p align="center">
+	The human mind takes 13 milliseconds to recognize a letter. <br>
+	Multiply that by millions of letters every day, and properly-set <br>type saves time, reduce eye strain, and reduce a few headaches.<br>
+	Nebula recommends <a href="https://atom.io/packages/import-sf-mono">SF Mono</a> for editing. It's fantastic.
+</p>
+<br>
+
+<hr>
+
+<h2 align="center">The little things make the big things.</h2>
+<h3>Additional features</h3>
+<p>Use the nebula-ui and nebula-syntax themes together and get all these awesome features.
+<ul>
+	<li>Fading elements don't only fade in opacity, but also in saturation.</li>
+	<li>Tabs fade when not hovered.</li>
+	<li>The tree-view fades when not hovered.</li>
+	<li>The minimap, when installed, fades when it's not being used.</li>
+	<li>Scrollbars glow while being dragged.</li>
+	<li>Matching tags produce a subtle deep blue glow under them for easier spotting among code.</li>
+	<li>Tabs fade when not hovered.</li>
+	<li>All open tabs stretch to take the full width of the tab bar.</li>
+	<li>Tab close buttons, normally red, are blue when the file has been modified.</li>
+	<li>
+		Syntax errors detected in your code pulse a deep red underglow:<br>
+		<img src="http://i.giphy.com/12BQyrHqrBij9C.gif" alt="Error Pulsing">
+	</li>
+</ul>
+
+<hr>
+
+<p align="center">
+	Made with &hearts; by <a href="http://www.tjkohli.com/">TJ Kohli</a>.
+</p>
+<p align="center">
+	<a href="http://www.tjkohli.com/">
+		<img src="http://tjkoh.li/15T2G/5ICxHe96+" align="center" width="50" alt="Error Pulsing">
+	</a>
+</p>
