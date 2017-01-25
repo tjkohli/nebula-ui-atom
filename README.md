@@ -93,26 +93,28 @@
 
 <br>
 <h2 align="center">The little things make the big things.</h2>
-<h3>Additional features</h3>
-<p>Use the nebula-ui and nebula-syntax themes together and get all these awesome features.
-<ul>
-	<li>Fading elements don't only fade in opacity, but also in saturation.</li>
-	<li>Tabs fade when not hovered.</li>
-	<li>The tree-view fades when not hovered.</li>
-	<li>The minimap, when installed, fades when it's not being used.</li>
-	<li>Scrollbars glow while being dragged.</li>
-	<li>Matching tags produce a subtle deep blue glow under them for easier spotting among code.</li>
-	<li>Tabs fade when not hovered.</li>
-	<li>All open tabs stretch to take the full width of the tab bar.</li>
-	<li>Tab close buttons, normally red, are blue when the file has been modified.</li>
-	<li>
-		Syntax errors detected in your code pulse a deep red underglow:<br>
-		<img src="http://i.giphy.com/12BQyrHqrBij9C.gif" alt="Error Pulsing">
-	</li>
-</ul>
+<h3 align="center">Additional features</h3>
+<p align="center">Use the nebula-ui and nebula-syntax themes together and get all these awesome features.
+	<ul>
+		<li>Fading elements don't only fade in opacity, but also in saturation.</li>
+		<li>Tabs fade when not hovered.</li>
+		<li>The tree-view fades when not hovered.</li>
+		<li>The minimap, when installed, fades when it's not being used.</li>
+		<li>Scrollbars glow while being dragged.</li>
+		<li>Matching tags produce a subtle deep blue glow under them for easier spotting among code.</li>
+		<li>Tabs fade when not hovered.</li>
+		<li>All open tabs stretch to take the full width of the tab bar.</li>
+		<li>Tab close buttons, normally red, are blue when the file has been modified.</li>
+		<li>
+			Syntax errors detected in your code pulse a deep red underglow:<br>
+			<img src="http://i.giphy.com/12BQyrHqrBij9C.gif" alt="Error Pulsing">
+		</li>
+	</ul>
+</p>
 
 <hr>
 
+<br>
 <p align="center">
 	<a href="http://www.tjkohli.com/" title="Made with <3 by TJ Kohli">
 		<img src="http://tjkoh.li/15T2G/5ICxHe96+" align="center" width="50" alt="Made with <3 by TJ Kohli">
