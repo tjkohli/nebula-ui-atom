@@ -3,11 +3,21 @@
 // Custom styles for popular plugins
 
 atom-text-editor-minimap {
-	opacity: 0.4;
-	-webkit-filter: grayscale(50%);
-	.transition(opacity, -webkit-filter;);
-	&:hover {
-		opacity: 1;
-		-webkit-filter: grayscale(0%);
+	canvas {
+		opacity: 0.5;
+		-webkit-filter: grayscale(50%);
+		.transition(opacity, -webkit-filter;);
 	}
+	&:hover {
+		canvas {
+			opacity: 1;
+			-webkit-filter: grayscale(0%);
+		}
+	}
+}
+
+// Hide the vertical scrollbar if the minimap exists
+atom-text-editor[with-minimap] .vertical-scrollbar {
+  opacity: 0;
+  width: 0;
 }

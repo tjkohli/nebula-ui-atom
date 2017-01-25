@@ -7,12 +7,20 @@
 	opacity: 0.5;
 	background: transparent;
 	border-right: 1px solid transparent;
-	-webkit-filter: grayscale(50%);
-	.transition(opacity, border-color, -webkit-filter;);
+	.transition(opacity, border-color;);
 
 	&:hover {
 		opacity: 1;
 		border-right-color: @background-color-highlight;
+	}
+}
+
+.tree-view {
+
+	-webkit-filter: grayscale(50%);
+	.transition(-webkit-filter;);
+
+	&:hover {
 		-webkit-filter: grayscale(0%);
 	}
 }

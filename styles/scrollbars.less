@@ -1,0 +1,30 @@
+// Scrollbars
+// -------------------
+// "I remember the old days when Nebula didn't ship with styled scrollbars" — Everyone
+
+.scrollbars-visible-always {
+	::-webkit-scrollbar {
+		cursor: pointer !important;
+		width: 12px;
+		height: 12px;
+	}
+	::-webkit-scrollbar-corner,
+	::-webkit-scrollbar-track {
+		background: transparent;
+	}
+
+	::-webkit-scrollbar-thumb {
+		background-color: @scrollbar-color;
+		box-shadow:
+			inset -4px 0 0 @scrollbar-background-color,
+			inset 4px 0 0 @scrollbar-background-color;
+		&:horizontal {
+			box-shadow:
+				inset 0 -4px 0 @scrollbar-background-color,
+				inset 0 4px 0 @scrollbar-background-color;
+		}
+		&:active {
+			background-color: @blue;
+		}
+	}
+}
