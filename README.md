@@ -94,7 +94,7 @@
 <br>
 <h2 align="center">The little things make the big things.</h2>
 <h3 align="center">Additional features</h3>
-<p align="center">Use the nebula-ui and nebula-syntax themes together and get all these awesome features.
+<p align="center">Use the <a href="https://atom.io/themes/nebula-ui">nebula-ui</a> and <a href="https://atom.io/themes/nebula-syntax">nebula-syntax</a> themes together and get all these awesome features.
 	<ul>
 		<li>Fading elements don't only fade in opacity, but also in saturation.</li>
 		<li>Tabs fade when not hovered.</li>
