@@ -28,7 +28,7 @@
 		font-size: @font-size;
 		letter-spacing: 0.2px;
 		max-width: none;
-		padding-right: 30px;
+		padding-right: 25px;
 		border-radius: @component-border-radius;
 		background-color: transparent;
 		.transition();
@@ -47,21 +47,42 @@
 			}
 		}
 
+		.title {
+			text-align: center;
+			text-overflow: initial;
+			position: relative;
+			&:after {
+				content: '';
+				display: block;
+				position: absolute;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				width: 20px;
+				transform: translate3d(0,0,0);
+				box-shadow: inset -20px 0 10px -10px @tab-bar-background-color;
+				.transition(box-shadow);
+			}
+		}
+
 		&:hover {
 			background-color: @background-color-highlight;
 
 			.close-icon {
 				color: inherit;
 			}
-		}
-
-		.title {
-			text-align: center;
+			.title {
+				&:after {
+					box-shadow: inset -20px 0 10px -10px @background-color-highlight;
+				}
+			}
 		}
 		// Modified Icon (the blue circle) -------------------
 		&.modified {
+
 			.close-icon {
 				color: @blue;
+				text-shadow: 0 0 15px;
 			}
 
 			&:not(:hover) .close-icon {
@@ -71,6 +92,7 @@
 				right: 12px;
 				margin-top: -3px;
 				border: 1px solid @blue;
+				box-shadow: 0 0 10px fade(@blue, 50%), inset 0 0 1px @blue;
 			}
 
 			&:hover {
@@ -85,13 +107,12 @@
 			width: 30px;
 			text-align: center;
 			right: 0;
-			transition-property: color;
-			transition-duration: 0.2s;
-			transition-timing-function: ease;
+			transition: color 0.2s ease;
 			cursor: pointer;
 
 			&:hover {
 				color: @red !important;
+				text-shadow: 0 0 15px;
 			}
 		}
 		// Dragging -------------------

@@ -6,7 +6,12 @@
 // List Group -------------------
 
 .list-group {
+	.character-match {
+		color: inherit;
+		font-weight: inherit;
+	}
 	li {
+		letter-spacing: 0.3px;
 		padding-left: @component-padding/2;
 		// We want to highlight the background of the list items because we dont know their size.
 		&.selected {
@@ -16,6 +21,19 @@
 			&:before {
 				display: none;
 			}
+			.character-match {
+				color: lighten(@blue, 14%);
+				// border-bottom: 1px solid fade(@blue, 100%);
+				text-shadow: 0 0 10px @blue;
+			}
+		}
+	}
+}
+.command-palette {
+	.list-group {
+		.character-match {
+			color: inherit;
+			font-weight: inherit;
 		}
 	}
 }
@@ -24,13 +42,19 @@
 
 .list-group,
 .list-tree {
-	color: @text-color-subtle;
+	color: lighten(@text-color-subtle, 10%);
+	atom-workspace[theme-nebula-ui-focusmode=enabled] & {
+		color: @text-color-subtle;
+	}
+
 	li {
 		.name {
 			padding-right: 17px;
 		}
 		.transition();
 	}
+
+	// Colors the status of files
 	.generate-list-item-text-color(@class) {
 		li:not(.list-nested-item).text-@{class},
 	    li.list-nested-item.text-@{class} > .list-item {
@@ -55,9 +79,7 @@
 		padding: @component-padding/2 @component-padding;
 		border-radius: 2px;
 		color: lighten(desaturate(@base-background-color, 10%), 40%);
-		transition-property: color, background-color;
-		transition-duration: 0.2s;
-		transition-timing-function: ease;
+		transition: background-color 0.2s ease;;
 
 		.secondary-line {
 			opacity: 0.4;
@@ -80,13 +102,17 @@
 	// box-shadow: 0 2px 8px 1px hsla(0,0%,0%,.3);
 	box-shadow: 0 15px 50px hsla(0, 0, 0, 0.2);
 
+	// The explanation of the suggested snippet/value, usually with a link
 	.suggestion-description {
-		background: none !important;
+		color: @text-color-selected;
+		// background: none !important;
 		opacity: 0.4;
 		font-weight: 300;
-
-		.suggestion-description-content {
-			color: #fff;
+		.transition(opacity);
+	}
+	&:hover {
+		.suggestion-description {
+			opacity: 1;
 		}
 	}
 
@@ -95,6 +121,74 @@
 
 		li {
 			padding-left: @popover-list-padding;
+		}
+	}
+}
+autocomplete-suggestion-list {
+	&.select-list.popover-list {
+		ol.list-group {
+			li {
+				color: inherit;
+				.word {
+					.transition(color);
+				}
+				&.selected {
+					.word {
+						color: @text-color;
+					}
+					.character-match {
+						color: lighten(@blue, 15%);
+						text-shadow: 0 0 10px @blue;
+					}
+				}
+			}
+		}
+	}
+	.icon {
+		&.snippet {
+			color: @text-color-highlight;
+			background: fade(@text-color-highlight, 10%);
+		}
+		&.attribute {
+			color: @green;
+			background: fade(@green, 10%);
+		}
+		&.variable {
+			color: @orange;
+			background: fade(@orange, 10%);
+		}
+		&.value {
+			color: @purple;
+			background: fade(@purple, 10%);
+		}
+		&.tag {
+			color: @red;
+			background: fade(@red, 10%);
+		}
+		&.property {
+			color: @blue;
+			background: fade(@blue, 10%);
+		}
+		&.selector {
+			color: @green;
+			background: fade(@green, 10%);
+		}
+	}
+}
+.fuzzy-finder {
+	.list-group {
+		li {
+			.transition(color, background-color;);
+			&.selected {
+				.character-match {
+					text-shadow: 0 0 10px @blue;
+				}
+			}
+		}
+		.character-match {
+			color: inherit;
+			font-weight: inherit;
+			text-shadow: 0 0 10px @text-color-subtle;
 		}
 	}
 }
