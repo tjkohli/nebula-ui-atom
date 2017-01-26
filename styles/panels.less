@@ -32,13 +32,17 @@ atom-panel.modal {
 
 .panel-bottom {
 	header {
-		opacity: 0.4;
 		background: transparent;
 		.transition(opacity);
 	}
-	&:hover {
+	atom-workspace[theme-nebula-ui-focusmode=enabled] & {
 		header {
-			opacity: 1;
+			opacity: 0.4;
+		}
+		&:hover {
+			header {
+				opacity: 1;
+			}
 		}
 	}
 }

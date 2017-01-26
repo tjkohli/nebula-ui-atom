@@ -20,7 +20,11 @@ atom-pane {
 
 .title-bar {
 	border: 0;
-	color: lighten(desaturate(@base-background-color, 10%), 40%);
+	color: lighten(@text-color-subtle, 10%);
 	background: none;
-	opacity: 0.5;
+	opacity: 1;
+	.transition(opacity;);
+	atom-workspace[theme-nebula-ui-focusmode=enabled] & {
+		opacity: 0.5;
+	}
 }

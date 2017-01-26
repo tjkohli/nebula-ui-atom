@@ -4,25 +4,30 @@
 // Overrides: atom/tree-view
 
 .tree-view-resizer {
-	opacity: 0.5;
 	background: none;
-	border-right: 1px solid transparent;
+	border-right: 1px solid @background-color-highlight;
 	.transition(opacity, border-color;);
 
-	&:hover {
-		opacity: 1;
-		border-right-color: @background-color-highlight;
+	atom-workspace[theme-nebula-ui-focusmode=enabled] & {
+		opacity: 0.5;
+		border-right: 1px solid transparent;
+		&:hover {
+			opacity: 1;
+			border-right-color: @background-color-highlight;
+		}
 	}
 }
 
 .tree-view {
 
 	background: none;
-	-webkit-filter: grayscale(50%);
 	.transition(-webkit-filter;);
 
-	&:hover {
-		-webkit-filter: grayscale(0%);
+	atom-workspace[theme-nebula-ui-focusmode=enabled] & {
+		-webkit-filter: grayscale(50%);
+		&:hover {
+			-webkit-filter: grayscale(0%);
+		}
 	}
 
 	.entry {

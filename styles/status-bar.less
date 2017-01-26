@@ -6,18 +6,14 @@
 
 .status-bar {
 	font-size: @font-size;
-	// border-top: 1px solid @base-border-color;
 	background-color: @status-bar-background-color;
-
 	& > div {
-		opacity: 0.5;
 		-webkit-filter: grayscale(50%);
 		.transition(opacity, -webkit-filter;);
 	}
 
 	&:hover {
 		& > div {
-			opacity: 1;
 			-webkit-filter: grayscale(0%);
 		}
 	}
@@ -29,6 +25,17 @@
 
 		&:hover {
 			color: @text-color-selected;
+		}
+	}
+	atom-workspace[theme-nebula-ui-focusmode=enabled] & {
+		& > div {
+			opacity: 0.5;
+		}
+
+		&:hover {
+			& > div {
+				opacity: 1;
+			}
 		}
 	}
 }
