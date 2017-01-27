@@ -11,10 +11,10 @@
 <!-- Shields -->
 
 <p align="center">
-	<a href="https://github.com/tjkohli/nebula-ui/releases/">
+	<a href="https://github.com/tjkohli/nebula-ui/">
 		<img align="center" src="https://img.shields.io/github/release/tjkohli/nebula-ui.svg?style=flat-square&label=UI%20-%20GitHub" alt="GitHub Nebula UI Releases">
 	</a>
-	<a href="https://github.com/tjkohli/nebula-syntax/releases/">
+	<a href="https://github.com/tjkohli/nebula-syntax/">
 		<img align="center" src="https://img.shields.io/github/release/tjkohli/nebula-syntax.svg?style=flat-square&label=Syntax%20-%20GitHub" alt="GitHub Nebula Syntax Releases">
 	</a>
 	<a href="https://atom.io/themes/nebula-ui">
