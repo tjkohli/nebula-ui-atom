@@ -12,16 +12,16 @@
 
 <p align="center">
 	<a href="https://github.com/tjkohli/nebula-ui/releases/">
-		<img align="center" src="https://img.shields.io/github/release/tjkohli/nebula-ui.svg?style=flat-square&label=ui%20-%20release" alt="GitHub Nebula UI Releases">
+		<img align="center" src="https://img.shields.io/github/release/tjkohli/nebula-ui.svg?style=flat-square&label=UI%20-%20GitHub" alt="GitHub Nebula UI Releases">
 	</a>
 	<a href="https://github.com/tjkohli/nebula-syntax/releases/">
-		<img align="center" src="https://img.shields.io/github/release/tjkohli/nebula-syntax.svg?style=flat-square&label=syntax%20-%20release" alt="GitHub Nebula Syntax Releases">
+		<img align="center" src="https://img.shields.io/github/release/tjkohli/nebula-syntax.svg?style=flat-square&label=Syntax%20-%20GitHub" alt="GitHub Nebula Syntax Releases">
 	</a>
 	<a href="https://atom.io/themes/nebula-ui">
-		<img align="center" src="https://img.shields.io/apm/v/nebula-ui.svg?style=flat-square&label=ui%20-%20apm" alt="Atom Nebula UI">
+		<img align="center" src="https://img.shields.io/apm/v/nebula-ui.svg?style=flat-square&label=UI%20-%20Atom" alt="Atom Nebula UI">
 	</a>
 	<a href="https://atom.io/themes/nebula-syntax">
-		<img align="center" src="https://img.shields.io/apm/v/nebula-syntax.svg?style=flat-square&label=syntax%20-%20apm" alt="Atom Nebula Syntax">
+		<img align="center" src="https://img.shields.io/apm/v/nebula-syntax.svg?style=flat-square&label=Syntax%20-%20Atom" alt="Atom Nebula Syntax">
 	</a>
 </p>
 
