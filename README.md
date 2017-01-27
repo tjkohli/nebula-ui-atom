@@ -11,7 +11,7 @@
 <!-- Shields -->
 
 <p align="center">
-	<a href="https://github.com/tjkohli/nebula-ui/releases/latest">
+	<a href="https://github.com/tjkohli/nebula-ui/releases/">
 		<img align="center" src="https://img.shields.io/github/release/tjkohli/nebula-ui.svg?style=flat-square" alt="GitHub">
 	</a>
 	<a href="https://atom.io/themes/nebula-ui">
@@ -19,7 +19,7 @@
 	</a>
 </p>
 
-<p align="center">An Atom theme that's <em>out of this world</em>.<br><a href="https://github.com/tjkohli/nebula-syntax">Works best when paired with the nebula-syntax theme</a></p>
+<p align="center">An Atom theme that's <em>out of this world</em>.<br><a href="https://atom.io/themes/nebula-syntax">Works best when paired with the nebula-syntax theme</a></p>
 
 <p align="center">
   <img align="center" src="http://tjkoh.li/q4OR/47Q3r092+" alt="Nebula theme screenshot">
@@ -46,15 +46,17 @@
 
 <h3 align="center">Have your eye candy. And see it, too.</h3>
 <p align="center">
-	All six colors were painstakingly tested for eye strain, legibility, and <br>
-	aesthetics on ten different monitor configurations, including sRGB, Adobe RGB, <br>
-	miscalibrated, grayscale, HDR, high-contrast, low-contrast, f.lux, and more.
+	All six colors were painstakingly tested for ergonomics, <br>
+	legibility, and aesthetics on several monitor configurations, <br>
+	including sRGB, Adobe RGB, miscalibrated, grayscale, HDR, <br>
+	high-contrast, low-contrast, f.lux, and more.
 </p>
 
 <h3 align="center">Multichromatic. Monochromatic.</h3>
 <p align="center">
-	All colors were tested together a monochromatic<br>
-	environment to ensure their contrast levels match so<br>no single color catches your eye more than the others do.
+	All colors were tested together a monochromatic <br>
+	environment to ensure their contrast levels match so <br>
+	no single color catches your eye more than the others do.
 </p>
 <br>
 
@@ -69,7 +71,8 @@
 <h2 align="center">Minimal distractions. Maximum utility.</h2>
 <p align="center">
 	Modals fly above your code. Inputs come to life when activated. <br>
-	Non-editor panes gracefully fade into the deep blue-gray<br> background when you're not working in them.
+	Non-editor panes gracefully fade into the deep blue-gray <br>
+	background when you're not working in them.
 </p>
 <br>
 
@@ -84,7 +87,8 @@
 <h2 align="center">A theme that's just your type.</h2>
 <p align="center">
 	The human mind takes 13 milliseconds to recognize a letter. <br>
-	Multiply that by millions of letters every day, and properly-set <br>type saves time, reduces eye strain, and can save you a few headaches.<br>
+	Multiply that by millions of letters every day, and properly-set <br>
+	type saves time, reduces eye strain, and can save you a few headaches.<br>
 	Nebula recommends <a href="https://atom.io/packages/import-sf-mono">SF Mono</a> for editing. It's fantastic.
 </p>
 <br>
@@ -92,19 +96,24 @@
 <hr>
 
 <br>
-<h2 align="center">The little things make the big things.</h2>
+
+<h2 align="center">The little things.</h2>
 <h3 align="center">Additional features</h3>
 <p align="center">Use the <a href="https://atom.io/themes/nebula-ui">nebula-ui</a> and <a href="https://atom.io/themes/nebula-syntax">nebula-syntax</a> themes together and get all these awesome features.
 	<ul>
 		<li>Fading elements don't only fade in opacity, but also in saturation.</li>
 		<li>Tabs fade when not hovered.</li>
-		<li>The tree-view fades when not hovered.</li>
+		<li>Comments brighten on hover or when they're in the active line</li>
+		<li>Comment brightness splashes downward to the next comment line, if there is one</li>
+		<li>The tree-view fades away when not hovered.</li>
 		<li>The minimap, when installed, fades when it's not being used.</li>
 		<li>Scrollbars glow while being dragged.</li>
-		<li>Matching tags produce a subtle deep blue glow under them for easier spotting among code.</li>
+		<li>Matching tags produce a subtle deep blue glow under them.</li>
 		<li>Tabs fade when not hovered.</li>
+		<li>Buttons fill upwards with a glowing blue effect when they're pressed.</li>
 		<li>All open tabs stretch to take the full width of the tab bar.</li>
 		<li>Tab close buttons, normally red, are blue when the file has been modified.</li>
+		<li>If you'd rather have full brightness on all UI elements, just toggle Focus Mode off in the Nebula UI preferences!</li>
 		<li>
 			Syntax errors detected in your code pulse a deep red underglow:<br>
 			<img src="http://i.giphy.com/12BQyrHqrBij9C.gif" alt="Error Pulsing">
