@@ -8,14 +8,7 @@
 	font-size: @font-size;
 	background-color: @status-bar-background-color;
 	& > div {
-		-webkit-filter: grayscale(50%);
 		.transition(opacity, -webkit-filter;);
-	}
-
-	&:hover {
-		& > div {
-			-webkit-filter: grayscale(0%);
-		}
 	}
 
 	a {
@@ -30,11 +23,13 @@
 	atom-workspace[theme-nebula-ui-focusmode=enabled] & {
 		& > div {
 			opacity: 0.5;
+			-webkit-filter: grayscale(50%);
 		}
 
 		&:hover {
 			& > div {
 				opacity: 1;
+				-webkit-filter: grayscale(0%);
 			}
 		}
 	}

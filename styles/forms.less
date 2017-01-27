@@ -1,0 +1,114 @@
+// Form Elements
+// -------------------
+// Used to style various form elements
+
+// labels
+
+.input-label,
+.settings-view .input-label {
+	cursor: pointer;
+}
+
+// radio buttons
+
+.settings-view input[type="radio"],
+input[type="radio"] {
+	background-color: @background-color-highlight;
+	cursor: pointer;
+
+	&:checked,
+	&:hover {
+		background-color: lighten(@background-color-highlight, 5%);
+	}
+
+	&:checked {
+		background-color: @blue;
+	}
+
+	&:active {
+		background-color: lighten(@background-color-highlight, 15%);
+	}
+}
+
+// checkboxes
+
+.settings-view input[type="checkbox"],
+input[type="checkbox"] {
+	background-color: @background-color-highlight;
+	cursor: pointer;
+	border: 1px solid @button-border-color;
+	// box-shadow: inset 0 0 5px -5px @blue;
+	.transition(border, box-shadow, background-color;);
+
+	// color of checkmark
+	&:after,
+	&:before {
+		background-color: @blue;
+		top: 1em;
+		left: 0.5em;
+	}
+
+	&:hover,
+	&:checked {
+		background-color: @button-background-color-hover;
+		border-color: lighten(@button-border-color, 5%);
+	}
+
+	&:active,
+	&:checked:active {
+		// color of checkmark
+		&:after,
+		&:before {
+			background-color: @text-color;
+		}
+		background-color: @blue;
+		// box-shadow: inset 0 -25px 5px -5px @blue;
+		border-color: @blue;
+	}
+
+	&:focus {
+		border-color: @blue;
+	}
+	// &:not(:checked) {
+	// 	box-shadow: none;
+	// }
+}
+
+.form-control {
+	height: 27px;
+}
+
+
+// dropdowns
+
+.settings-view select,
+select,
+select.form-control {
+	-webkit-appearance: none;
+	// background-image adds the down arrow after removing -webkit-appearance
+    background-image: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='24' height='24' viewBox='0 0 24 24'><path fill='#fff' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'></path></svg>");
+    background-position: 99% 50%;
+    background-repeat: no-repeat;
+	padding: 0 10px;
+	cursor: pointer;
+	background-color: @button-background-color;
+	border: 1px solid @button-border-color;
+	border-radius: @component-border-radius;
+	.transition(color, border, box-shadow, background-color;);
+
+	&:not(.disabled) {
+		&:focus,
+		&:hover {
+			color: @text-color-highlight;
+			color: @text-color-highlight;
+			background-color: @button-background-color-hover;
+			border-color: lighten(@button-border-color, 5%);
+		}
+
+		// Disabled this since it doesn't work on <select> menus
+		// &:active {
+		// 	box-shadow: inset 0 -60px 20px -20px @blue;
+		// 	border-color: @blue;
+		// }
+	}
+}
