@@ -40,8 +40,36 @@
 
 	.list-item {
 		border-radius: @component-border-radius;
+
 		&:hover {
 			background-color: @background-color-highlight;
+		}
+	}
+	// shifts the expander arrow a bit away from the edge
+	&.has-collapsable-children {
+		.list-nested-item {
+			// expanded tree items
+			.list-item {
+				&:before {
+					left: 2px;
+					text-align: center;
+					// override the icon
+					content: "\f078";
+					// rotates it to simulate a different icon
+					transform: rotate(90deg);
+					transition: transform 0.2s ease;
+					transform-origin: center;
+				}
+			}
+			// collapsed tree items
+			&.collapsed {
+				.list-item {
+					&:before {
+						left: 2px;
+						transform: rotate(0);
+					}
+				}
+			}
 		}
 	}
 }
