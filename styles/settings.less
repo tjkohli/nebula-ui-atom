@@ -10,7 +10,7 @@
 	.link {
 		color: @text-color;
 		text-decoration: none;
-		.transition(color;);
+		.transition(color);
 
 		&:hover {
 			color: @blue;
@@ -38,7 +38,13 @@
 		.nav {
 			> li {
 				> a {
-					transition: background-color 0.3s ease;
+					// transition-property: background-color, box-shadow;
+					// transition-duration: 0.3s, 0.2s;
+					// transition-timing-function: ease;
+					.transition(background-color);
+					// &:active {
+					// 	box-shadow: inset 250px 0 20px -20px fade(@blue, 20%);
+					// }
 				}
 
 				&.active {
@@ -53,8 +59,10 @@
 	.package-card {
 		background-color: transparent;
 		border: none;
+		border-bottom: 1px solid @base-border-color;
+		border-radius: 3px 3px 0 0;
 		margin: 10px 0;
-		transition: background-color 0.3s ease;
+		.transition(background-color, border-color, box-shadow;);
 
 		.package-name {
 			text-decoration: none;
@@ -66,20 +74,19 @@
 
 		.package-description {
 			color: @text-color-subtle;
-			transition: color 0.3s ease;
+			.transition(color);
 		}
 
 		.meta-user {
 			.author {
 				text-decoration: none;
-				transition: color 0.3s ease;
+				.transition(color);
 
 				&:hover {
 					color: @blue;
 				}
 			}
 		}
-
 		&:hover {
 			background-color: @overlay-background-color;
 
@@ -87,11 +94,23 @@
 				color: @text-color;
 			}
 		}
+		&:active {
+			background-color: @overlay-background-color;
+			box-shadow: inset 0 -250px 50px -50px fade(@blue, 15%);
+			border-color: @blue;
+		}
+		&.disabled {
+			background-color: inherit;
+			box-shadow: inset 0 -50px 50px -50px fade(@orange, 15%);
+			border-color: @orange;
+			&:active {
+				box-shadow: inset 0 -250px 50px -50px fade(@orange, 15%);
+			}
+		}
 	}
 
 	.package-container {
 		.row {
-			border-bottom: 1px solid @base-border-color;
 			margin: 10px 0;
 		}
 	}
