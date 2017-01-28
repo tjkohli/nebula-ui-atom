@@ -2,7 +2,116 @@
 // -------------------
 // Find and replace in the current buffer or across the entire project.
 // Overrides: atom/find-and-replace
+@keyframes resultsPulse {
+	0%,
+	100% {
+		box-shadow: 0;
+	}
+
+	20%,
+	30% {
+		box-shadow: inset 0 -80px 40px -40px fade(@blue, 15%);
+	}
+}
+@keyframes noResultsPulse {
+	0%,
+	100% {
+		box-shadow: 0;
+	}
+
+	20%,
+	30% {
+		box-shadow: inset 0 -80px 40px -40px fade(@red, 15%);
+	}
+}
+@keyframes highlightPulse {
+	0%,
+	100% {
+		box-shadow: 0;
+	}
+
+	20%,
+	30% {
+		box-shadow: 0 0 40px fade(@blue, 90%);
+	}
+}
 
 .find-and-replace {
 	border-top: 1px solid @base-border-color;
+
+	.find-container {
+		atom-text-editor[mini].is-focused {
+			border-radius: 3px 3px 0 0;
+		}
+
+		.find-meta-container {
+			.result-counter {
+				.transition(color);
+			}
+		}
+	}
+	// when the find has valid results
+	&.has-results {
+		.find-container {
+			// flash the input area blue
+			atom-text-editor[mini].is-focused {
+				animation: resultsPulse 1s ease;
+			}
+
+			.find-meta-container {
+				.result-counter {
+					color: @blue;
+				}
+			}
+		}
+	}
+
+	&.has-no-results {
+		.find-container {
+			// flash the input area red
+			atom-text-editor[mini].is-focused {
+				border-bottom-color: @red;
+				animation: noResultsPulse 1s ease;
+			}
+
+			.find-meta-container {
+				.result-counter {
+					color: @red;
+				}
+			}
+		}
+	}
 }
+
+atom-text-editor {
+
+	// find and replace results
+	.current-result .region.region.region,
+	.find-result .region.region.region {
+		border-radius: 3px;
+		background-color: fade(@blue, 10%);
+		transition: border-color 0.4s;
+	}
+
+	// non-current results
+	.find-result .region.region.region {
+		border: 2px solid transparent;
+	}
+
+	// current result
+	.current-result .region.region.region {
+		border: 2px solid lighten(@blue, 10%);
+		transition-duration: 0;
+		background-color: fade(@blue, 15%);
+		animation: highlightPulse 1s ease;
+	}
+}
+
+// Why styling the flash no work :(
+
+// @syntax-selection-flash-color: #FFFF00;
+//
+// @-webkit-keyframes flash {
+//   from { background-color: @syntax-selection-flash-color; }
+//   to { background-color: null; }
+// }
