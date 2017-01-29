@@ -18,12 +18,20 @@ atom-pane {
 	}
 }
 
+// adds some space above the tabs if a system title bar is used
+atom-panel-container.header {
+	&:empty,
+	.fullscreen & {
+		margin-bottom: 5px;
+	}
+}
+
 .title-bar {
 	border: none;
 	color: lighten(@text-color-subtle, 10%);
 	background: none;
 	opacity: 1;
-	.transition(opacity;);
+	.transition(opacity, margin-top;);
 	atom-workspace[theme-nebula-ui-focusmode=enabled] & {
 		opacity: 0.5;
 	}
