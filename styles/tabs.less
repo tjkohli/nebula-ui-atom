@@ -84,14 +84,14 @@
 
 			.close-icon {
 				color: @blue;
-				text-shadow: 0 0 15px;
+				text-shadow: 0 0 15px @blue;
 			}
 
 			&:not(:hover) .close-icon {
 				top: 50%;
 				width: 7px;
 				height: 7px;
-				right: 12px;
+				right: 13px;
 				margin-top: -3px;
 				border: 1px solid @blue;
 				box-shadow: 0 0 10px fade(@blue, 50%), inset 0 0 1px @blue;
@@ -108,12 +108,12 @@
 			color: transparent;
 			width: 20px;
 			right: 0;
-			transition: color 0.2s ease;
+			transition: color 0.2s ease, text-shadow 0.2s ease;
 			cursor: pointer;
 
 			&:hover {
 				color: @red !important;
-				text-shadow: 0 0 15px;
+				text-shadow: 0 0 15px @red;
 			}
 		}
 		// Dragging -------------------
