@@ -74,11 +74,10 @@
   <img align="center" src="http://tjkoh.li/EoKQ/1zrgqdez+" alt="Search">
 </p>
 
-<h2 align="center">Minimal distractions. Maximum utility.</h2>
+<h2 align="center">Get more done with Focus Mode.</h2>
 <p align="center">
-	Modals fly above your code. Inputs come to life when activated. <br>
-	Non-editor panes gracefully fade into the deep blue-gray <br>
-	background when you're not working in them.
+	Modals fly above your code. Inputs come to life when focused. <br>
+	And with the all-new Focus Mode, elements gracefully fade into <br>the deep blue-gray background when you're not looking at them.
 </p>
 <br>
 
@@ -93,9 +92,9 @@
 <h2 align="center">A theme that's just your type.</h2>
 <p align="center">
 	The human mind takes 13 milliseconds to recognize a letter. <br>
-	Multiply that by millions of letters every day, and properly-set <br>
-	type saves time, reduces eye strain, and can save you a few headaches.<br>
-	Nebula recommends <a href="https://atom.io/packages/import-sf-mono">SF Mono</a> for editing. It's fantastic.
+	Multiply that by millions of letters every day, and properly-set type <br>
+	saves time, reduces eye strain, and can save you a few headaches.<br>
+	Nebula recommends <a href="https://atom.io/packages/import-sf-mono">SF Mono</a> for code. It's fantastic.
 </p>
 <br>
 
