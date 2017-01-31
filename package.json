@@ -3,7 +3,7 @@
   "author": "TJ Kohli <hello@tjkohli.com>",
   "main": "./lib/main",
   "theme": "ui",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "A beautifully minimal, subtly animated, and carefully designed Atom UI theme that lets you focus on what matters: your code. For best results, use with the nebula-syntax theme.",
   "keywords": [
     "ui",
