@@ -3,8 +3,8 @@
 // Stuff that changes and stuff.
 
 // Text Colors
-@text-color:           #fff;
-@text-color-highlight: #f0f0f0;
+@text-color:           hsl(0,0,100%);
+@text-color-highlight: hsl(223,3,96%);
 @text-color-subtle:    lighten(desaturate(@base-background-color, 10%), 30%);
 @text-color-selected:  lighten(desaturate(@base-background-color, 10%), 80%);
 
@@ -14,10 +14,10 @@
 @text-color-error:   @red;
 
 // Background colors
-@background-color-info:    hsl(208, 100%, 50%);
-@background-color-success: hsl(160,  70%, 36%);
-@background-color-warning: hsl(32,   60%, 50%);
-@background-color-error:   hsl(0,    70%, 50%);
+@background-color-info:    @blue;
+@background-color-success: darken(@green, 25%);
+@background-color-warning: darken(@orange, 25%);
+@background-color-error:   hsl(346,100%,50%);
 
 @background-color-highlight: lighten(@base-background-color, 7%);
 @background-color-selected:  lighten(@base-background-color, 10%);
@@ -50,7 +50,8 @@
 @button-background-color:          lighten(@base-background-color, 7%);
 @button-background-color-hover:    lighten(@button-background-color, 3%);
 @button-background-color-selected: @button-background-color-hover;
-@button-border-color:              @button-background-color;
+// @button-border-color:           @button-background-color;
+@button-border-color-hover:        lighten(@button-background-color, 5%);
 
 // Tab colors
 @tab-bar-background-color:    @base-background-color;
@@ -63,7 +64,8 @@
 @tree-view-background-color: @base-background-color;
 @tree-view-border-color:     @base-border-color;
 
-@scrollbar-color: @background-color-selected;
+// Scrollbar colors
+@scrollbar-color: 			 @background-color-selected;
 @scrollbar-background-color: @base-background-color;
 
 // Site colors
