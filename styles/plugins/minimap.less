@@ -1,0 +1,23 @@
+// Minimap
+
+atom-workspace[theme-nebula-ui-focusmode=enabled] & {
+	atom-text-editor-minimap {
+		canvas {
+			opacity: 0.5;
+			-webkit-filter: grayscale(50%);
+			.transition(opacity, -webkit-filter;);
+		}
+
+		&:hover {
+			canvas {
+				opacity: 1;
+				-webkit-filter: grayscale(0%);
+			}
+		}
+	}
+	// Hide the vertical scrollbar if the minimap exists
+	atom-text-editor[with-minimap] .vertical-scrollbar {
+		opacity: 0;
+		width: 0;
+	}
+}

@@ -2,44 +2,6 @@
 // -------------------
 // Custom styles for popular plugins
 
-
-// Minimap
-
-atom-workspace[theme-nebula-ui-focusmode=enabled] & {
-	atom-text-editor-minimap {
-		canvas {
-			opacity: 0.5;
-			-webkit-filter: grayscale(50%);
-			.transition(opacity, -webkit-filter;);
-		}
-
-		&:hover {
-			canvas {
-				opacity: 1;
-				-webkit-filter: grayscale(0%);
-			}
-		}
-	}
-	// Hide the vertical scrollbar if the minimap exists
-	atom-text-editor[with-minimap] .vertical-scrollbar {
-		opacity: 0;
-		width: 0;
-	}
-}
-
-
-// Highlight Selected
-
-atom-text-editor {
-	// highlight-selected
-	.highlight-selected .region.region.region {
-		border-radius: 2px;
-		border: none;
-		border-bottom: 1px solid @blue;
-	}
-	// Remove when resolved in core build
-	[class="highlight highlight-selected background"] .region.region.region,
-	.highlight-selected.background .region.region {
-		background-color: fade(@blue, 15%);
-	}
-}
+@import "plugins/minimap";
+@import "plugins/highlight-selected";
+@import "plugins/autocomplete";

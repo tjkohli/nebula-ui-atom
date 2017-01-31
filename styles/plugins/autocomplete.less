@@ -1,0 +1,58 @@
+// Autocomplete
+
+autocomplete-suggestion-list {
+	&.select-list.popover-list {
+		ol.list-group {
+			li {
+				.word {
+					color: @text-color-subtle;
+					.transition(color;);
+					.character-match {
+						color: @text-color-subtle;
+						text-shadow: 0 0 10px transparent;
+						.transition(color, text-shadow;);
+					}
+				}
+				&.selected {
+					.word {
+						color: @text-color;
+						.character-match {
+							color: lighten(@blue, 22%);
+							text-shadow: 0 0 10px fade(@blue, 50%);
+						}
+					}
+				}
+			}
+		}
+	}
+	.icon {
+		&.snippet {
+			color: @text-color-highlight;
+			background: fade(@text-color-highlight, 10%);
+		}
+		&.attribute {
+			color: @green;
+			background: fade(@green, 10%);
+		}
+		&.variable {
+			color: @orange;
+			background: fade(@orange, 10%);
+		}
+		&.value {
+			color: @purple;
+			background: fade(@purple, 10%);
+		}
+		&.tag {
+			color: @red;
+			background: fade(@red, 10%);
+		}
+		&.property {
+			color: @blue;
+			background: fade(@blue, 10%);
+		}
+		&.selector {
+			color: @green;
+			background: fade(@green, 10%);
+		}
+	}
+}

@@ -1,0 +1,15 @@
+// Highlight Selected
+
+atom-text-editor {
+	// highlight-selected
+	.highlight-selected .region.region.region {
+		border-radius: 2px;
+		border: none;
+		border-bottom: 1px solid @blue;
+	}
+	// Remove when resolved in core build
+	[class="highlight highlight-selected background"] .region.region.region,
+	.highlight-selected.background .region.region {
+		background-color: fade(@blue, 15%);
+	}
+}
