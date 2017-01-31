@@ -6,34 +6,19 @@
 // List Group
 
 .list-group {
-	.character-match {
-		color: inherit;
-		font-weight: inherit;
-	}
 	li {
 		letter-spacing: 0.3px;
 		padding-left: @component-padding/2;
-		// We want to highlight the background of the list items because we dont know their size.
 		&.selected {
 			color: @text-color-selected;
 			background-color: @background-color-selected;
-
 			&:before {
 				display: none;
 			}
 			.character-match {
 				color: lighten(@blue, 14%);
-				// border-bottom: 1px solid fade(@blue, 100%);
 				text-shadow: 0 0 10px @blue;
 			}
-		}
-	}
-}
-.command-palette {
-	.list-group {
-		.character-match {
-			color: inherit;
-			font-weight: inherit;
 		}
 	}
 }
@@ -77,118 +62,105 @@
 .select-list {
 	li {
 		padding: @component-padding/2 @component-padding;
-		border-radius: 2px;
 		color: lighten(desaturate(@base-background-color, 10%), 40%);
-		transition: background-color 0.2s ease;;
+		border-radius: 2px;
+		.transition(color, background-color, opacity, text-shadow;);
 
 		.secondary-line {
 			opacity: 0.4;
+			.transition(color, opacity;);
 		}
 	}
 
 	.status {
 		float: right;
 	}
-}
 
-// Popover List -------------------
-// Used as a popover for something like autocomplete.
+	// Popover List -------------------
+	// Used as a popover for something like autocomplete.
+	&.popover-list {
+		@popover-list-padding: @component-padding/2;
+		padding: @popover-list-padding;
+		border-radius: @component-border-radius;
+		background-color: @overlay-background-color;
+		// box-shadow: 0 2px 8px 1px hsla(0,0%,0%,.3);
+		box-shadow: 0 15px 50px hsla(0, 0, 0, 0.2);
 
-.select-list.popover-list {
-	@popover-list-padding: @component-padding/2;
-	padding: @popover-list-padding;
-	border-radius: @component-border-radius;
-	background-color: @overlay-background-color;
-	// box-shadow: 0 2px 8px 1px hsla(0,0%,0%,.3);
-	box-shadow: 0 15px 50px hsla(0, 0, 0, 0.2);
-
-	// The explanation of the suggested snippet/value, usually with a link
-	.suggestion-description {
-		color: @text-color-selected;
-		// background: none !important;
-		opacity: 0.4;
-		font-weight: 300;
-		.transition(opacity);
-	}
-	&:hover {
+		// The explanation of the suggested snippet/value, usually with a link
 		.suggestion-description {
-			opacity: 1;
+			color: @text-color-selected;
+			// background: none !important;
+			opacity: 0.4;
+			font-weight: 300;
+			.transition(opacity);
 		}
-	}
-
-	.list-group {
-		margin-top: @popover-list-padding;
-
-		li {
-			padding-left: @popover-list-padding;
+		&:hover {
+			.suggestion-description {
+				opacity: 1;
+			}
 		}
-	}
-}
-autocomplete-suggestion-list {
-	&.select-list.popover-list {
-		ol.list-group {
+
+		.list-group {
+			margin-top: @popover-list-padding;
+
 			li {
-				color: inherit;
-				.word {
-					.transition(color);
+				padding-left: @popover-list-padding;
+			}
+		}
+	}
+
+	ol.list-group {
+		li {
+			color: @text-color-subtle;
+			&.two-lines {
+				.secondary-line {
+					color: @text-color-subtle;
 				}
 				&.selected {
-					.word {
-						color: @text-color;
-					}
-					.character-match {
-						color: lighten(@blue, 15%);
-						text-shadow: 0 0 10px @blue;
+					.secondary-line {
+						color: lighten(@text-color-subtle, 40%);
 					}
 				}
 			}
-		}
-	}
-	.icon {
-		&.snippet {
-			color: @text-color-highlight;
-			background: fade(@text-color-highlight, 10%);
-		}
-		&.attribute {
-			color: @green;
-			background: fade(@green, 10%);
-		}
-		&.variable {
-			color: @orange;
-			background: fade(@orange, 10%);
-		}
-		&.value {
-			color: @purple;
-			background: fade(@purple, 10%);
-		}
-		&.tag {
-			color: @red;
-			background: fade(@red, 10%);
-		}
-		&.property {
-			color: @blue;
-			background: fade(@blue, 10%);
-		}
-		&.selector {
-			color: @green;
-			background: fade(@green, 10%);
-		}
-	}
-}
-.fuzzy-finder {
-	.list-group {
-		li {
-			.transition(color, background-color;);
+			.character-match {
+				color: @text-color-subtle;
+				text-shadow: 0 0 10px transparent;
+				font-weight: inherit;
+				.transition(color, text-shadow;);
+			}
 			&.selected {
+				color: @text-color-selected;
+				background-color: @background-color-selected;
 				.character-match {
-					text-shadow: 0 0 10px @blue;
+					color: lighten(@blue, 22%);
+					text-shadow: 0 0 10px fade(@blue, 50%);
 				}
 			}
 		}
-		.character-match {
-			color: inherit;
-			font-weight: inherit;
-			text-shadow: 0 0 10px @text-color-subtle;
+
+		&.mark-active {
+			@active-icon-size: 14px;
+			li {
+				&:before {
+					content: '';
+					background-color: transparent;
+					position: static;
+					display: inline-block;
+					left: auto;
+					right: auto;
+					margin-right: 7px;
+					height: @active-icon-size;
+					width: @active-icon-size;
+					font-size: @active-icon-size;
+				}
+				&.active {
+					.octicon(check, @active-icon-size);
+
+					&:before {
+						color: @text-color-info;
+					}
+				}
+			}
 		}
 	}
 }
