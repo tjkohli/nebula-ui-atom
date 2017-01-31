@@ -11,14 +11,10 @@
 	border-width: 1px 0;
 	padding: 5px 10px;
 	overflow-x: auto;
-	transition: border-color 0.4s ease;
+	.transition(border-color);
 
 	&:hover {
 		border-color: @base-border-color;
-
-		.tab {
-			opacity: 1;
-		}
 	}
 
 	.tab {
@@ -33,26 +29,26 @@
 		padding-right: 20px;
 		border-radius: @component-border-radius;
 		background-color: transparent;
-		.transition();
+		.transition(background-color);
 
 		&:last-of-type {
 			border-right: 0;
-		}
-
-		&.active {
-			flex: 1;
-			color: @text-color-selected;
-			background: none;
-
-			.title {
-				padding-right: 0;
-			}
 		}
 
 		.title {
 			text-align: center;
 			text-overflow: initial;
 			position: relative;
+			.transition(color, -webkit-filter, opacity;);
+
+			atom-workspace[theme-nebula-ui-focusmode=enabled] & {
+				&.status-modified,
+				&.status-added {
+					-webkit-filter: grayscale(50%);
+					opacity: 0.5;
+				}
+			}
+
 			&:after {
 				content: '';
 				display: block;
@@ -67,6 +63,30 @@
 			}
 		}
 
+		// The tab is active
+		&.active {
+			flex: 1;
+			color: @text-color-selected;
+			background: none;
+
+			.title {
+				opacity: 1;
+				padding-right: 0;
+				&.status-modified,
+				&.status-added {
+					opacity: 1;
+					color: @text-color-selected;
+				}
+				atom-workspace[theme-nebula-ui-focusmode=enabled] & {
+					&.status-modified,
+					&.status-added {
+						opacity: 1;
+					}
+				}
+			}
+		}
+
+		// Hover over a tab
 		&:hover {
 			background-color: @background-color-highlight;
 
@@ -74,18 +94,45 @@
 				color: inherit;
 			}
 			.title {
+				&.status-modified {
+					+ .close-icon {
+						color: @text-color-warning;
+					}
+				}
+				&.status-added {
+					+ .close-icon {
+						color: @text-color-success;
+					}
+				}
+				atom-workspace[theme-nebula-ui-focusmode=enabled] & {
+					&.status-modified,
+					&.status-added {
+						opacity: 1;
+						-webkit-filter: grayscale(0%);
+					}
+				}
 				&:after {
 					box-shadow: inset -20px 0 10px -10px @background-color-highlight;
 				}
 			}
 		}
-		// Modified Icon (the blue circle) -------------------
+
+		// Modified Icon (the blue circle)
 		&.modified {
 
 			.close-icon {
 				color: @blue;
 				text-shadow: 0 0 15px @blue;
 			}
+
+			// We *could* use this to style the close-icon for Git modified tabs...
+			// ...but we *choose* not to at this point in time.
+			//
+			// .title.status-modified {
+			// 	+ .close-icon {
+			//
+			// 	}
+			// }
 
 			&:not(:hover) .close-icon {
 				top: 50%;
@@ -103,7 +150,8 @@
 				}
 			}
 		}
-		// Close Icon (the X) -------------------
+
+		// Close Icon (the X)
 		.close-icon {
 			color: transparent;
 			width: 20px;
@@ -116,7 +164,8 @@
 				text-shadow: 0 0 15px @red;
 			}
 		}
-		// Dragging -------------------
+
+		// Dragging
 		// Styles get applied while dragging a tab
 		&.is-dragging {
 			//   background: darken(@tab-background-color, 10%);
@@ -130,8 +179,9 @@
 	}
 }
 
-.pane-column,
-.panes {
+// Used to adjust the top-border for tab bars within split-view panes
+.panes,
+.pane-column {
 	.pane:first-of-type {
 		.tab-bar {
 			padding-top: 0;
