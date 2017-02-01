@@ -8,8 +8,8 @@
 	border-radius: 0;
 	background-color: @tab-bar-background-color;
 	border: 1px solid transparent;
-	border-width: 1px 0;
-	padding: 5px 10px;
+	border-width: 0 0 1px;
+	padding: 0 10px 5px;
 	overflow-x: auto;
 	.transition(border-color);
 
@@ -180,12 +180,11 @@
 }
 
 // Used to adjust the top-border for tab bars within split-view panes
-.panes,
-.pane-column {
-	.pane:first-of-type {
+.pane-column.vertical {
+	.pane:not(:first-of-type) {
 		.tab-bar {
-			padding-top: 0;
-			border-top: 0;
+			padding-top: 5px;
+			border-width: 1px 0;
 		}
 	}
 }
