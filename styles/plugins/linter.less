@@ -2,40 +2,47 @@
 
 .highlight-underline(@color) {
 	border-bottom: none;
-	box-shadow: inset 0 -1px 0 @color, 0 7px 17px -7px mix(@color, @base-background-color, 50%);
+	// We are using mix() instead of fade() to work around
+	// an ugly issue where 'transparent' passed through
+	// fade reveals an ugly, darker color.
+	// The things we do for good design.
+	background: mix(@color, @base-background-color, 10%);
+	box-shadow:
+		inset 0 -1px 0 @color,
+		0 7px 17px mix(@color, @base-background-color, 50%);
 }
-
 .highlight-underline(@color1; @color2) {
 	@name: replace("pulse-underline-@{color1}", "#", "");
-	animation: ~"@{name}" 2s ease infinite;
 
-	@keyframes ~ "@{name}" {
-		0%,
-		100%,
-		60% {
+	animation: ~"@{name}" 3s ease infinite;
+	@keyframes ~"@{name}" {
+		0%, 100% {
 			// make sure the highlight color is color1
 			// this ensures the error is highlighted the instant it's typed
 			.highlight-underline(@color1);
 		}
-
-		50% {
+		20% {
 			.highlight-underline(@color2);
 		}
 	}
 }
 
+
 .linter-highlight,
 atom-text-editor.editor .linter-highlight {
 	&.syntax--error .region {
-		.highlight-underline(red; transparent;);
+		.highlight-underline(
+			mix(@background-color-error, @base-background-color, 30%);
+			@background-color-error
+		);
 	}
 
 	&.syntax--warning .region {
-		.highlight-underline(@orange);
+		.highlight-underline(@background-color-warning);
 	}
 
 	&.syntax--info .region,
 	&.syntax--trace .region {
-		.highlight-underline(@blue);
+		.highlight-underline(@background-color-info);
 	}
 }
