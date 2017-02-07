@@ -21,3 +21,13 @@ atom-workspace[theme-nebula-ui-focusmode=enabled] & {
 		width: 0;
 	}
 }
+atom-text-editor {
+	atom-text-editor-minimap {
+		.minimap-visible-area {
+			// the scrolling shape denoting current scroll position
+			&::after {
+				background: fade(lighten(@base-background-color, 40%), 20%);
+			}
+		}
+	}
+}
