@@ -20,7 +20,7 @@
 @background-color-error:   hsl(346,100%,50%);
 
 @background-color-highlight: lighten(@base-background-color, 7%);
-@background-color-selected:  lighten(@base-background-color, 10%);
+@background-color-selected:  fade(@text-color-subtle, 20%);
 @app-background-color:  	 @base-background-color;
 
 // Base colors
@@ -28,8 +28,8 @@
 @base-border-color:     lighten(@base-background-color, 5%);
 
 // Component colors
-@pane-item-background-color: @base-background-color;
-@pane-item-border-color:     @base-border-color;
+@pane-item-background-color: transparent;
+@pane-item-border-color:     transparent;
 
 @input-background-color: @app-background-color;
 @input-border-color:     @base-border-color;
