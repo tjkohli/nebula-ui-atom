@@ -37,6 +37,7 @@ input[type="checkbox"] {
 	background-color: @background-color-highlight;
 	cursor: pointer;
 	border: 1px solid @button-background-color;
+	margin-top: 3px;
 	// box-shadow: inset 0 0 5px -5px @blue;
 	.transition(border, box-shadow, background-color;);
 
@@ -44,8 +45,8 @@ input[type="checkbox"] {
 	&:after,
 	&:before {
 		background-color: @blue;
-		top: 1em;
-		left: 0.5em;
+		top: 0.9em;
+		left: 0.4em;
 	}
 
 	&:hover,
@@ -69,9 +70,6 @@ input[type="checkbox"] {
 	&:focus {
 		border-color: @blue;
 	}
-	// &:not(:checked) {
-	// 	box-shadow: none;
-	// }
 }
 
 .form-control {
