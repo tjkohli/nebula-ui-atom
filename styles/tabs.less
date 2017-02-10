@@ -24,12 +24,14 @@
 		line-height: @tab-height;
 		font-size: @font-size;
 		letter-spacing: 0.2px;
-		max-width: none;
+		max-width: 100%;
 		min-width: 50px;
 		padding-right: 20px;
 		border-radius: @component-border-radius;
 		background-color: transparent;
-		.transition(background-color);
+		transition-property: background-color, max-width;
+		transition-duration: 0.4s, 1s;
+		transition-timing-function: ease;
 
 		&:last-of-type {
 			border-right: 0;
