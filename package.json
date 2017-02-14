@@ -6,13 +6,13 @@
   "version": "0.5.3",
   "description": "A beautifully minimal, subtly animated, and carefully designed Atom UI theme that lets you focus on what matters: your code. For best results, use with the nebula-syntax theme.",
   "keywords": [
+	"atom",
     "ui",
     "theme",
     "nebula",
     "minimal",
     "focus",
-    "TJ",
-    "Kohli"
+	"distraction free"
   ],
   "repository": "https://github.com/tjkohli/nebula-ui",
   "license": "MIT",
