@@ -23,14 +23,40 @@
 		line-height: @tab-height;
 		font-size: @font-size;
 		letter-spacing: 0.2px;
-		max-width: 100%;
 		min-width: 50px;
+		max-width: 100%;
 		padding-right: 20px;
 		border-radius: @component-border-radius;
 		background-color: transparent;
-		transition-property: background-color, max-width;
-		transition-duration: 0.4s, 1s;
-		transition-timing-function: ease;
+		.transition(background-color, max-width;);
+
+		// second and more
+		.tabWidthSet(@number) {
+			&:first-child:nth-last-child(@{number}),
+			&:first-child:nth-last-child(@{number}) ~ .tab {
+				max-width: percentage(1 / @number);
+			}
+		}
+
+		// first tab
+		&:first-child:nth-last-child(1) {
+			max-width: 100%;
+		}
+		// second and more
+		.tabWidthSet(2);
+		.tabWidthSet(3);
+		.tabWidthSet(4);
+		.tabWidthSet(5);
+		.tabWidthSet(6);
+		.tabWidthSet(7);
+		.tabWidthSet(8);
+		.tabWidthSet(9);
+		.tabWidthSet(10);
+		.tabWidthSet(11);
+		.tabWidthSet(12);
+		.tabWidthSet(13);
+		.tabWidthSet(14);
+		.tabWidthSet(15);
 
 		&:last-of-type {
 			border-right: 0;
@@ -89,6 +115,7 @@
 
 		// Hover over a tab
 		&:hover {
+			max-width: none;
 			background-color: @background-color-highlight;
 
 			.close-icon {
