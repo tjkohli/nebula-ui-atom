@@ -4,6 +4,11 @@
 
 // labels
 
+label {
+	font-weight: inherit;
+}
+
+.input-color,
 .input-label,
 .settings-view .input-label {
 	cursor: pointer;
@@ -45,7 +50,7 @@ input[type="checkbox"] {
 	&:after,
 	&:before {
 		background-color: @blue;
-		top: 0.9em;
+		top: 0.85em;
 		left: 0.4em;
 	}
 
@@ -70,12 +75,18 @@ input[type="checkbox"] {
 	&:focus {
 		border-color: @blue;
 	}
+
+	&.input-toggle {
+		&:before {
+			top: -0.1em;
+			left: -0.1em;
+		}
+	}
 }
 
 .form-control {
 	height: 27px;
 }
-
 
 // dropdowns
 
