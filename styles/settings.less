@@ -39,9 +39,14 @@
 				> a {
 					.transition(background-color);
 				}
-
+				&:hover {
+					> a {
+						background-color: fade(@background-color-highlight, 50%);
+					}
+				}
 				&.active {
 					> a {
+						background-color: @background-color-highlight;
 						color: @text-color;
 					}
 				}

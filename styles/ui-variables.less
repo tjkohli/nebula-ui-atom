@@ -19,7 +19,7 @@
 @background-color-warning: darken(@orange, 22%);
 @background-color-error:   hsl(346,100%,50%);
 
-@background-color-highlight: lighten(@base-background-color, 7%);
+@background-color-highlight: lighten(@base-background-color, 5%);
 @background-color-selected:  fade(@text-color-subtle, 20%);
 @app-background-color:  	 @base-background-color;
 
@@ -90,15 +90,22 @@
 
 // Misc
 @component-border-radius: 2px;
-@font-family: '.SFNSText-Regular', 'BlinkMacSystemFont', 'Lucida Grande', 'Segoe UI', Ubuntu, Cantarell, sans-serif;
+@font-family:
+	'.SFNSText-Regular',
+	'BlinkMacSystemFont',
+	'Lucida Grande',
+	'Segoe UI',
+	Ubuntu,
+	Cantarell,
+	sans-serif;
 
 // Nebula Colors
 
 @status-bar-background-color: darken(@base-background-color, 2%);
 
 @red: 			#F04180;
-@orange: 		#F5CD73;
-@light-orange:  lighten(@orange, 10%);
+@orange:		#F5CD73;
+@light-orange:	lighten(@orange, 10%);
 @green: 		#AAED37;
 @cyan: 			#23DEC5;
 @blue: 			darken(#7AC3FF,10%);
