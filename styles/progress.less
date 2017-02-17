@@ -32,3 +32,41 @@
 		display: inline-block;
 	}
 }
+
+// Nebula UI / Progress Bars
+// -------------------------
+// Are we there yet? Let's check the bar!
+
+@keyframes progressPulse {
+	0%, 50%, 100% {
+		background-color: fade(@blue, 20%);
+		box-shadow: 0 0 10px fade(@blue, 50%);
+	}
+	25% {
+		background-color: @blue;
+		box-shadow: 0 0 10px @blue;
+	}
+	75% {
+		background-color: @text-color;
+		box-shadow: 0 0 10px @text-color;
+	}
+}
+
+progress {
+	-webkit-appearance: none;
+	height: 2px;
+	animation: progressPulse 2s ease infinite;
+	&::-webkit-progress-bar {
+		background-color: @background-color-selected;
+	}
+	&[value] {
+		animation: none;
+		&::-webkit-progress-bar {
+			background-color: @background-color-selected;
+		}
+		&::-webkit-progress-value {
+			background-color: @blue;
+			box-shadow: 0 0 10px fade(@blue, 50%);
+		}
+	}
+}
