@@ -2,10 +2,14 @@
 // ------------------
 
 atom-text-editor {
-	-webkit-font-smoothing: subpixel-antialiased;
+	// transform: translateX(0.0001px);
+	// -webkit-font-smoothing: subpixel-antialiased;
+	// -webkit-backface-visibility: hidden;
+	// -webkit-font-smoothing: antialiased;
 	.cursor {
 		border-width: 2px;
 		transition: opacity 0.2s ease;
+		-webkit-backface-visibility: hidden;
 		// rest of .cursor is in nebula-syntax
 	}
 	.gutter {
