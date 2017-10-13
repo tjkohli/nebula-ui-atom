@@ -28,7 +28,8 @@
 		padding-right: 20px;
 		border-radius: @component-border-radius;
 		background-color: transparent;
-		.transition(background-color, max-width;);
+		opacity: 1;
+		.transition(background-color, max-width, opacity, height;);
 
 		// second and more
 		.tabWidthSet(@number) {
@@ -207,9 +208,13 @@
 			}
 		}
 
-		// Hide tab if it's the only one
+		// Hide tab if it's the only one and not modified
 		&:only-child {
-			display: none;
+			transition-duration: 0.9s;
+			&:not(.modified) {
+				opacity: 0;
+				height: 0;
+			}
 		}
 	}
 }
