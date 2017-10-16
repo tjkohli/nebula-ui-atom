@@ -53,3 +53,20 @@ atom-panel.modal {
 		}
 	}
 }
+
+// Atom Dock
+
+.atom-dock-resize-handle.atom-dock-resize-handle-resizable.left, .atom-dock-resize-handle.atom-dock-resize-handle-resizable.right {
+	width: 1px;
+	margin-left: 3px;
+	opacity: 0.1;
+	background: @base-border-color;
+	.transition(opacity);
+}
+atom-panel-container {
+	&:hover {
+		.atom-dock-resize-handle.atom-dock-resize-handle-resizable.left, .atom-dock-resize-handle.atom-dock-resize-handle-resizable.right {
+			opacity: 1;
+		}
+	}
+}
