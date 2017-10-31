@@ -208,12 +208,14 @@
 			}
 		}
 
-		// Hide tab if it's the only one and not modified
-		&:only-child {
-			transition-duration: 0.9s;
-			&:not(.modified) {
-				opacity: 0;
-				height: 0;
+		atom-workspace[theme-nebula-ui-hidesingletab=enabled] & {
+			// Hide tab if it's the only one and not modified
+			&:only-child {
+				transition-duration: 0.9s;
+				&:not(.modified) {
+					opacity: 0;
+					height: 0;
+				}
 			}
 		}
 	}

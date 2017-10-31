@@ -3,20 +3,38 @@
 root = document.getElementsByTagName('atom-workspace').item(0);
 
 # Modules
+
 module.exports =
   activate: (state) ->
-    atom.config.observe 'nebula-ui.focusMode', (setFocus) ->
-      setFocusMode(setFocus)
+    atom.config.observe 'nebula-ui.focusMode', (value) ->
+      setFocusMode(value)
+
+    atom.config.observe 'nebula-ui.hideSingleTab', (value) ->
+      setHideSingleTab(value)
 
   deactivate: ->
     unsetFocusMode()
+    unsetHideSingleTab()
 
-# Functions
-setFocusMode = (setFocus) ->
-  if (setFocus)
+# Focus Mode -----------------------
+
+setFocusMode = (focusMode) ->
+  if (focusMode)
     unsetFocusMode()
   else
     root.removeAttribute('theme-nebula-ui-focusmode')
 
 unsetFocusMode = ->
   root.setAttribute('theme-nebula-ui-focusmode', "enabled")
+
+
+# Hide Single Tab -----------------------
+
+setHideSingleTab = (hideSingleTab) ->
+  if (hideSingleTab)
+    unsetHideSingleTab()
+  else
+    root.removeAttribute('theme-nebula-ui-hidesingletab')
+
+unsetHideSingleTab = ->
+  root.setAttribute('theme-nebula-ui-hidesingletab', "enabled")

@@ -3,8 +3,8 @@ describe "Nebula UI theme", ->
     waitsForPromise ->
       atom.packages.activatePackage('nebula-ui')
 
-  it "allows to disable full-width tab sizing to be set via theme settings", ->
+  it "enables Focus Mode", ->
     expect(document.documentElement.getAttribute('theme-nebula-ui-focusmode')).toBe null
 
     atom.config.set('nebula-ui.focusMode', false)
-    expect(document.documentElement.getAttribute('theme-nebula-ui-focusmode')).toBe 'nofullwidth'
+    expect(document.documentElement.getAttribute('theme-nebula-ui-focusmode')).toBe 'enabled'
