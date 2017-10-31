@@ -3,7 +3,7 @@
   "author": "TJ Kohli <hello@tjkohli.com>",
   "main": "./lib/main",
   "theme": "ui",
-  "version": "0.9.1",
+  "version": "0.9.2",
   "description": "A beautifully minimal, subtly animated, and carefully designed Atom UI theme that lets you focus on what matters: your code. For best results, use with the nebula-syntax theme.",
   "keywords": [
     "atom",
@@ -25,12 +25,12 @@
       "description": "Gracefully fades certain panes and comments into the background when you're not using them, letting you focus on your code. Disabling this option will persist the brightened state.",
       "type": "boolean",
       "default": true
-  },
-  "hideSingleTab": {
-	"title": "Hide single-tab tab bar",
-	"description": "Gradually hides the tab bar if there is only one, unmodified tab open. Unsaved changes will show the tab bar. Disabling this option will persist the tab bar regardless of number of tabs.",
-	"type": "boolean",
-	"default": true
-  }
+    },
+    "hideSingleTab": {
+      "title": "Hide single-tab tab bar",
+      "description": "Gradually hides the tab bar if there is only one, unmodified tab open. Unsaved changes will show the tab bar. Disabling this option will persist the tab bar regardless of number of tabs.",
+      "type": "boolean",
+      "default": true
+    }
   }
 }
