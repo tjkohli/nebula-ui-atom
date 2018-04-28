@@ -60,7 +60,7 @@
 
 <h3 align="center">Multichromatic. Monochromatic.</h3>
 <p align="center">
-	All colors were tested together a monochromatic <br>
+	All colors were tested together in a monochromatic <br>
 	environment to ensure their contrast levels match so <br>
 	no single color catches your eye more than the others do.
 </p>
