@@ -25,7 +25,7 @@
 	</a>
 </p>
 
-<p align="center">An Atom theme that's <em>out of this world</em>.<br><a href="https://atom.io/themes/nebula-syntax">Works best when paired with the nebula-syntax theme</a></p>
+<p align="center">A minimal Atom theme that's <em>out of this world</em>.<br><a href="https://atom.io/themes/nebula-syntax">Works best when paired with the nebula-syntax theme</a></p>
 
 <p align="center">
   <img align="center" src="http://tjkoh.li/q4OR/47Q3r092+" alt="Nebula theme screenshot">
