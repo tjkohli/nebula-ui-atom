@@ -8,7 +8,7 @@
 	border-radius: 0;
 	border: 1px solid transparent;
 	border-width: 0 0 1px;
-	padding: 0 10px 5px;
+	padding: 0 5px 5px;
 	overflow-x: auto;
 	.transition(border-color);
 
@@ -29,35 +29,7 @@
 		border-radius: @component-border-radius;
 		background-color: transparent;
 		opacity: 1;
-		.transition(background-color, max-width, opacity, height;);
-
-		// second and more
-		.tabWidthSet(@number) {
-			&:first-child:nth-last-child(@{number}),
-			&:first-child:nth-last-child(@{number}) ~ .tab {
-				max-width: percentage(1 / @number);
-			}
-		}
-
-		// first tab
-		&:first-child:nth-last-child(1) {
-			max-width: 100%;
-		}
-		// second and more
-		.tabWidthSet(2);
-		.tabWidthSet(3);
-		.tabWidthSet(4);
-		.tabWidthSet(5);
-		.tabWidthSet(6);
-		.tabWidthSet(7);
-		.tabWidthSet(8);
-		.tabWidthSet(9);
-		.tabWidthSet(10);
-		.tabWidthSet(11);
-		.tabWidthSet(12);
-		.tabWidthSet(13);
-		.tabWidthSet(14);
-		.tabWidthSet(15);
+		.transition(background-color, opacity, height;);
 
 		&:last-of-type {
 			border-right: 0;
@@ -217,6 +189,19 @@
 					height: 0;
 				}
 			}
+		}
+	}
+	
+	.placeholder {
+		width: 2px;
+		background: @blue;
+		box-shadow: 0 0 20px @blue;
+		&:before,
+		&:after {
+			display: none;
+		}
+		+ .tab {
+			max-width: 100%;
 		}
 	}
 }
