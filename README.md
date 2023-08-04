@@ -37,7 +37,7 @@
 
 <br>
 <p align="center">
-  <img align="center" src="http://tjkoh.li/nmlY/12d2Hgpc+" alt="Nebula colors">
+  <img align="center" src="https://cdn.raster.app/nhtzvsqfghtsuw/code-stuff/ThVCpfbjfMT?ixlib=js-3.8.0&s=4f4d861fb8145e3a1531ff953b70a594" alt="Nebula colors">
 </p>
 
 <h2 align="center" >Meet the colors.</h2>
