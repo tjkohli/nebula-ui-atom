@@ -1,7 +1,7 @@
 <!-- Logo -->
 
 <p align="center">
-  <img align="center" src="https://www.tjkohli.com/nebula/nebula-logo.svg" alt="Nebula logo" width="300">
+  <img align="center" src="https://cdn.raster.app/nhtzvsqfghtsuw/code-stuff/P8BHdS79fbZ?ixlib=js-3.8.0&s=66a2c11a5a49b18e5c919496b009a74e" alt="Nebula logo" width="300">
 </p>
 
 <!-- Heading -->
